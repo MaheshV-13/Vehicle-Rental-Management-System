@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="600.0" prefWidth="1120.0" spacing="20" xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vehicle_rental_management.controllers.VehicleFormController">
+   <AnchorPane prefHeight="600.0" prefWidth="1120.0">
+      <children>
+         <ImageView fitHeight="602.0" fitWidth="1120.0" pickOnBounds="true">
+            <image>
+               <Image url="@Images/360_F_490446430_6VwPDZl0eG12SvcVJU4utrUwIWiBfyyh.jpg" />
+            </image>
+         </ImageView>
+         <AnchorPane prefHeight="602.0" prefWidth="556.0" style="-fx-background-color: #222121;">
+            <children>
+            
+                <Label layoutX="147.0" layoutY="29.0" text="Vehicle Details">
+                  <font>
+                     <Font name="Rockwell" size="36.0" />
+                  </font>
+                  <textFill>
+                     <LinearGradient endX="1.0" endY="1.0">
+                        <stops>
+                           <Stop>
+                              <color>
+                                 <Color red="1.0" green="0.615686297416687" blue="0.9607843160629272" />
+                              </color>
+                           </Stop>
+                           <Stop offset="1.0">
+                              <color>
+                                 <Color red="0.9210526347160339" green="0.9210526347160339" blue="0.9210526347160339" />
+                              </color>
+                           </Stop>
+                        </stops>
+                     </LinearGradient>
+                  </textFill>
+               </Label>
+                 <TextField fx:id="colorField" layoutX="63.0" layoutY="250.0" prefHeight="49.0" prefWidth="418.0" promptText="Color" style="-fx-background-radius: 30;">
+                  <font>
+                     <Font name="Rockwell" size="18.0" />
+                  </font></TextField>
+                 <TextField fx:id="plateField" layoutX="63.0" layoutY="184.0" prefHeight="49.0" prefWidth="418.0" promptText="Plate" style="-fx-background-radius: 30;">
+                  <font>
+                     <Font name="Rockwell" size="18.0" />
+                  </font>
+               </TextField>
+                 <ChoiceBox fx:id="statusChoiceBox" layoutX="63.0" layoutY="382.0" prefHeight="49.0" prefWidth="418.0" style="-fx-background-radius: 30;">
+                     <items>
+                         <FXCollections fx:factory="observableArrayList">
+                             <String fx:value="Available" />
+                             <String fx:value="Maintenance" />
+                         </FXCollections>
+                     </items>
+                 </ChoiceBox>
+                 <Button layoutX="231.0" layoutY="523.0" onAction="#handleCancel" style="-fx-background-radius: 30; -fx-background-color: transparent;" text="Cancel">
+                  <textFill>
+                     <LinearGradient endX="1.0" endY="1.0">
+                        <stops>
+                           <Stop>
+                              <color>
+                                 <Color red="1.0" green="0.615686297416687" blue="0.9607843160629272" />
+                              </color>
+                           </Stop>
+                           <Stop offset="1.0">
+                              <color>
+                                 <Color red="0.9210526347160339" green="0.9210526347160339" blue="0.9210526347160339" />
+                              </color>
+                           </Stop>
+                        </stops>
+                     </LinearGradient>
+                  </textFill>
+                  <font>
+                     <Font name="Rockwell" size="18.0" />
+                  </font></Button>
+                 <Button layoutX="240.0" layoutY="466.0" onAction="#handleSave" style="-fx-background-radius: 30; -fx-background-color: transparent;" text="Save" underline="true">
+                  <font>
+                     <Font name="Rockwell" size="18.0" />
+                  </font>
+                  <textFill>
+                     <LinearGradient endX="1.0" endY="1.0">
+                        <stops>
+                           <Stop>
+                              <color>
+                                 <Color red="1.0" green="0.615686297416687" blue="0.9607843160629272" />
+                              </color>
+                           </Stop>
+                           <Stop offset="0.6022876084465543">
+                              <color>
+                                 <Color red="1.0" green="1.0" blue="1.0" />
+                              </color>
+                           </Stop>
+                           <Stop offset="1.0">
+                              <color>
+                                 <Color red="1.0" green="1.0" blue="1.0" />
+                              </color>
+                           </Stop>
+                        </stops>
+                     </LinearGradient>
+                  </textFill></Button>
+                 <TextField fx:id="modelField" layoutX="63.0" layoutY="118.0" prefHeight="49.0" prefWidth="418.0" promptText="Model" style="-fx-background-radius: 30;">
+                  <font>
+                     <Font name="Rockwell" size="18.0" />
+                  </font>
+               </TextField>
+                 <TextField fx:id="priceField" layoutX="63.0" layoutY="316.0" prefHeight="49.0" prefWidth="418.0" promptText="Price" style="-fx-background-radius: 30;">
+                  <font>
+                     <Font name="Rockwell" size="18.0" />
+                  </font>
+               </TextField>
+            </children>
+         </AnchorPane>
+         <ImageView fitHeight="331.0" fitWidth="483.0" layoutX="597.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@Images/8401.jpg" />
+            </image>
+         </ImageView>
+      </children>
+   </AnchorPane>
+</VBox>

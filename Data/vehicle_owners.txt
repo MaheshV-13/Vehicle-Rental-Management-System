@@ -1,0 +1,2 @@
+justin,PKN8097,Perodua Alza,Black,69,true
+Paul,MNH9087,Perodua Alza,Red,50,true

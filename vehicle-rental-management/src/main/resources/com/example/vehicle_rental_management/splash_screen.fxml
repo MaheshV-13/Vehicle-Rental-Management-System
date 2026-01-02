@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="590.0" prefWidth="1105.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vehicle_rental_management.controllers.SplashScreenController">
+
+    <Label layoutX="436.0" layoutY="340.0" prefHeight="70.0" prefWidth="189.0" text="Loading...">
+        <font>
+            <Font name="Rockwell" size="36.0" />
+        </font>
+      <textFill>
+         <LinearGradient endX="1.0" endY="1.0">
+            <stops>
+               <Stop>
+                  <color>
+                     <Color red="0.9342105388641357" green="0.5190058350563049" blue="0.899610161781311" />
+                  </color>
+               </Stop>
+               <Stop offset="1.0">
+                  <color>
+                     <Color red="1.0" green="1.0" blue="1.0" />
+                  </color>
+               </Stop>
+            </stops>
+         </LinearGradient>
+      </textFill>
+    </Label>
+   <ImageView fitHeight="220.0" fitWidth="198.0" layoutX="427.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@Images/work-in-progress.png" />
+      </image>
+   </ImageView>
+
+</AnchorPane>

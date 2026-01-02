@@ -1,0 +1,12 @@
+Janesh,JKL4321,Perodua Myvi,Silver,12.5
+Harresh,OPQ2345,Honda City,White,180.0
+Paul,JKL4321,Perodua Myvi,Silver,18.125
+Justin,DEF3456,Nissan Almera,Grey,2.9166666666666665
+Justin,JKL3456,BMW X5,Grey,12.5
+Justin,STU4321,Hyundai Santa Fe,Blue,11.666666666666666
+Justin,RST5678,Toyota Vios,Grey,3.5416666666666665
+Justin,JKL4321,Perodua Myvi,Silver,25.0
+Justin,LMN8765,Volvo XC60,Black,86.66666666666667
+Justin,ABC1234,Myvi,White,37.5
+Justin,JKL4321,Perodua Myvi,Silver,62.5
+Mahesh,RST5678,Toyota Vios,Grey,85.0

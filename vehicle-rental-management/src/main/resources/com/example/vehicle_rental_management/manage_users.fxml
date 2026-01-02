@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.vehicle_rental_management.controllers.ManageUsersController">
+    <Label text="Manage Users" style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+
+    <TableView fx:id="usersTable" style="-fx-pref-width: 600px;">
+        <columns>
+            <TableColumn fx:id="usernameColumn" text="Username"/>
+            <TableColumn fx:id="emailColumn" text="Email"/>
+            <TableColumn fx:id="phoneColumn" text="Phone Number"/>
+            <TableColumn fx:id="rentedCarColumn" text="Rented Car"/>
+            <TableColumn fx:id="carModelColumn" text="Car Model"/>
+            <TableColumn fx:id="rentPerDayColumn" text="Rent Per Day"/>
+            <TableColumn fx:id="roleColumn" text="Role"/>
+        </columns>
+    </TableView>
+</VBox>

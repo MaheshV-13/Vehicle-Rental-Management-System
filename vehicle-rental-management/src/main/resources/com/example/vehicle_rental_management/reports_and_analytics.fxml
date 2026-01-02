@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="368.0" prefWidth="774.0" spacing="20" xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vehicle_rental_management.controllers.ReportsAndAnalyticsController">
+    <Label style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Reports | Analytics" />
+
+    <VBox>
+        <Label fx:id="mostRentedCarLabel" text="Most Rented Car: " />
+        <Label fx:id="leastRentedCarLabel" text="Least Rented Car: " />
+        <Label fx:id="totalRevenueLabel" text="Total Revenue: RM 0.00" />
+    </VBox>
+
+    <Label style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Customer Feedback:" />
+
+    <!-- Wrap the ListView in a ScrollPane -->
+    <ScrollPane fx:id="feedbackScrollPane" hbarPolicy="NEVER" prefHeight="600.0" prefWidth="774.0" style="-fx-pref-height: 200px;" vbarPolicy="AS_NEEDED">
+        <ListView fx:id="feedbackListView" prefHeight="500.0" prefWidth="775.0" />
+    </ScrollPane>
+</VBox>

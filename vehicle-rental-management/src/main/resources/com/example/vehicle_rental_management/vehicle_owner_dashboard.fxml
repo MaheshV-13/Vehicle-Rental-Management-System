@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="600.0" prefWidth="1120.0" spacing="20" style="-fx-background-color: #222121;" xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vehicle_rental_management.controllers.VehicleOwnerDashboardController">
+   <AnchorPane prefHeight="600.0" prefWidth="1120.0" style="-fx-background-color: #222121;">
+      <children>
+      
+          <TableView fx:id="vehicleTable" layoutX="545.0" layoutY="-1.0" prefHeight="609.0" prefWidth="574.0">
+              <columns>
+                  <TableColumn fx:id="plateColumn" text="Plate">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="plate" />
+                      </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn fx:id="modelColumn" text="Model">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="model" />
+                      </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn fx:id="colorColumn" text="Color">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="color" />
+                      </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn fx:id="priceColumn" text="Price (RM)">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="price" />
+                      </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn fx:id="statusColumn" text="Status">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="status" />
+                      </cellValueFactory>
+                      <!-- We will handle the status display in the controller -->
+                  </TableColumn>
+              </columns>
+          </TableView>
+          <Label layoutX="120.0" layoutY="45.0" text="Vehicle Owner Dashboard">
+            <font>
+               <Font name="Rockwell" size="24.0" />
+            </font>
+            <textFill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color red="1.0" green="0.6431372761726379" blue="0.9686274528503418" />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="1.0" green="1.0" blue="1.0" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </LinearGradient>
+            </textFill>
+         </Label>
+           <Button fx:id="addVehicleButton" layoutX="67.0" layoutY="339.0" onAction="#handleAddVehicle" prefHeight="40.0" prefWidth="240.0" style="-fx-background-radius: 30; -fx-background-color: black;" text="Add Vehicle">
+            <textFill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color red="1.0" green="0.6431372761726379" blue="0.9686274528503418" />
+                        </color>
+                     </Stop>
+                     <Stop offset="0.006729475100942127">
+                        <color>
+                           <Color red="1.0" green="0.6431372761726379" blue="0.9686274528503418" />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="1.0" green="0.7450980544090271" blue="0.9960784316062927" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </LinearGradient>
+            </textFill>
+            <font>
+               <Font name="Rockwell" size="14.0" />
+            </font>
+         </Button>
+           <Button fx:id="editVehicleButton" layoutX="67.0" layoutY="389.0" onAction="#handleEditVehicle" prefHeight="40.0" prefWidth="240.0" style="-fx-background-color: black; -fx-background-radius: 30;" text="Edit Vehicle">
+            <textFill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color red="1.0" green="0.6431372761726379" blue="0.9686274528503418" />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="0.9684210419654846" green="0.9684210419654846" blue="0.9684210419654846" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </LinearGradient>
+            </textFill>
+            <font>
+               <Font name="Rockwell" size="14.0" />
+            </font></Button>
+           <Button fx:id="removeVehicleButton" layoutX="67.0" layoutY="487.0" onAction="#handleRemoveVehicle" prefHeight="40.0" prefWidth="240.0" style="-fx-background-color: black; -fx-background-radius: 30;" text="Remove Vehicle">
+            <font>
+               <Font name="Rockwell" size="14.0" />
+            </font>
+            <textFill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color red="1.0" green="0.6431372761726379" blue="0.9686274528503418" />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="0.9684210419654846" green="0.9684210419654846" blue="0.9684210419654846" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </LinearGradient>
+            </textFill></Button>
+           <Button fx:id="confirmEditButton" layoutX="67.0" layoutY="438.0" onAction="#handleConfirmEdit" prefHeight="40.0" prefWidth="240.0" style="-fx-background-radius: 30; -fx-background-color: black;" text="Confirm Edit">
+            <font>
+               <Font name="Rockwell" size="14.0" />
+            </font>
+            <textFill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color red="1.0" green="0.6431372761726379" blue="0.9686274528503418" />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="0.9684210419654846" green="0.9684210419654846" blue="0.9684210419654846" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </LinearGradient>
+            </textFill></Button>
+           <Button fx:id="viewHistoryButton" layoutX="67.0" layoutY="536.0" onAction="#handleViewHistory" prefHeight="40.0" prefWidth="240.0" style="-fx-background-color: black; -fx-background-radius: 30;" text="View History">
+            <font>
+               <Font name="Rockwell" size="14.0" />
+            </font>
+            <textFill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color red="1.0" green="0.6431372761726379" blue="0.9686274528503418" />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="0.9684210419654846" green="0.9684210419654846" blue="0.9684210419654846" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </LinearGradient>
+            </textFill></Button>
+           <Button fx:id="feedbackButton" layoutX="321.0" layoutY="339.0" onAction="#handleFeedback" prefHeight="40.0" prefWidth="186.0" style="-fx-background-color: black; -fx-background-radius: 30;" text="Feedback">
+            <font>
+               <Font name="Rockwell" size="14.0" />
+            </font>
+            <textFill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color red="1.0" green="0.6431372761726379" blue="0.9686274528503418" />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="0.9684210419654846" green="0.9684210419654846" blue="0.9684210419654846" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </LinearGradient>
+            </textFill></Button>
+          <CheckBox fx:id="availabilityCheckBox" layoutX="76.0" layoutY="311.0" text="Available">
+            <font>
+               <Font name="Rockwell" size="14.0" />
+            </font>
+            <textFill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color red="1.0" green="0.6431372761726379" blue="0.9686274528503418" />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="1.0" green="1.0" blue="1.0" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </LinearGradient>
+            </textFill>
+         </CheckBox>
+          <TextField fx:id="priceField" layoutX="67.0" layoutY="258.0" prefHeight="40.0" prefWidth="390.0" promptText="Price" style="-fx-background-color: white; -fx-background-radius: 30;">
+            <font>
+               <Font name="Rockwell" size="14.0" />
+            </font>
+         </TextField>
+          <TextField fx:id="colorField" layoutX="67.0" layoutY="205.0" prefHeight="40.0" prefWidth="390.0" promptText="Color" style="-fx-background-color: white; -fx-background-radius: 30;">
+            <font>
+               <Font name="Rockwell" size="14.0" />
+            </font>
+         </TextField>
+      
+          <!-- Form to Add/Edit Vehicle -->
+          <TextField fx:id="plateField" layoutX="67.0" layoutY="153.0" prefHeight="40.0" prefWidth="390.0" promptText="Plate Number" style="-fx-background-radius: 30; -fx-background-color: white;">
+            <font>
+               <Font name="Rockwell" size="14.0" />
+            </font>
+         </TextField>
+         <ImageView fitHeight="120.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@Images/fotoart_1739981462793.png" />
+            </image>
+         </ImageView>
+          <TextField fx:id="modelField" layoutX="67.0" layoutY="100.0" prefHeight="40.0" prefWidth="390.0" promptText="C.Model" style="-fx-background-radius: 30; -fx-background-color: white;">
+            <font>
+               <Font name="Rockwell" size="14.0" />
+            </font>
+         </TextField>
+         <ImageView fitHeight="134.0" fitWidth="137.0" layoutX="347.0" layoutY="440.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@Images/saving_3887065.png" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="262.0" layoutY="344.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@Images/plus.png" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="40.0" fitWidth="30.0" layoutX="262.0" layoutY="394.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@Images/edit.png" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="52.0" fitWidth="30.0" layoutX="260.0" layoutY="492.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@Images/delete.png" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="30.0" fitWidth="54.0" layoutX="466.0" layoutY="344.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@Images/feedback.png" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="265.0" layoutY="541.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@Images/file_1052685.png" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="262.0" layoutY="443.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@Images/message_12503762.png" />
+            </image>
+         </ImageView>
+         <Button fx:id="logoutButton" layoutX="321.0" layoutY="389.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="40.0" prefWidth="186.0" style="-fx-background-radius: 30; -fx-background-color: black;" text="Logout">
+            <font>
+               <Font name="Rockwell" size="14.0" />
+            </font>
+            <textFill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color red="0.9459259510040283" green="0.4592592716217041" blue="1.0" />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="1.0" green="1.0" blue="1.0" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </LinearGradient>
+            </textFill></Button>
+         <ImageView fitHeight="30.0" fitWidth="48.0" layoutX="468.0" layoutY="394.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@Images/logout.png" />
+            </image>
+         </ImageView>
+      </children>
+   </AnchorPane>
+</VBox>

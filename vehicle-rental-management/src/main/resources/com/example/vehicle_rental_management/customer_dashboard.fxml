@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" spacing="20" xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vehicle_rental_management.controllers.CustomerDashboardController">
+   <AnchorPane prefHeight="590.0" prefWidth="1105.0" style="-fx-background-color: #222121;">
+      <children>
+      
+          <!-- Vehicle List -->
+          <ListView fx:id="vehicleListView" layoutX="503.0" onMouseClicked="#handleVehicleSelection" prefHeight="590.0" prefWidth="610.0" />
+         <Region layoutX="502.0" layoutY="546.0" prefHeight="48.0" prefWidth="611.0" style="-fx-background-color: #222121;" />
+         <ImageView fitHeight="122.0" fitWidth="122.0" layoutX="14.0" layoutY="-10.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@Images/fotoart_1739981462793.png" />
+            </image>
+         </ImageView>
+           <Label layoutX="76.0" layoutY="551.0" text="© 2025 Vehicle Rental Management. All rights reserved.">
+            <textFill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color red="0.9020833373069763" green="0.3472222089767456" blue="1.0" />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="0.9868420958518982" green="0.9868420958518982" blue="0.9868420958518982" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </LinearGradient>
+            </textFill>
+            <font>
+               <Font name="Rockwell" size="14.0" />
+            </font>
+         </Label>
+           <Label fx:id="rentedCarLabel" layoutX="522.0" layoutY="559.0" text="No rented car found.">
+            <textFill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color red="0.9020833373069763" green="0.3472222089767456" blue="1.0" />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="0.9868420958518982" green="0.9868420958518982" blue="0.9868420958518982" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </LinearGradient>
+            </textFill>
+            <font>
+               <Font name="Rockwell" size="14.0" />
+            </font>
+         </Label>
+           <Button fx:id="returnCarButton" layoutX="43.0" layoutY="285.0" onAction="#handleReturnCar" prefHeight="40.0" prefWidth="403.0" style="-fx-background-radius: 30; -fx-background-color: black;" text="Return Car">
+            <font>
+               <Font name="Rockwell" size="14.0" />
+            </font>
+            <textFill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color red="0.9020833373069763" green="0.3472222089767456" blue="1.0" />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="0.9868420958518982" green="0.9868420958518982" blue="0.9868420958518982" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </LinearGradient>
+            </textFill>
+         </Button>
+           <Button fx:id="viewRentedCarButton" layoutX="43.0" layoutY="225.0" onAction="#handleViewRentedCar" prefHeight="40.0" prefWidth="403.0" style="-fx-background-radius: 30; -fx-background-color: black;" text="View Rented Car">
+            <font>
+               <Font name="Rockwell" size="14.0" />
+            </font>
+            <textFill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color red="0.9020833373069763" green="0.3472222089767456" blue="1.0" />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="0.9868420958518982" green="0.9868420958518982" blue="0.9868420958518982" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </LinearGradient>
+            </textFill>
+         </Button>
+      
+          <!-- Booking History Button -->
+          <Button fx:id="bookingHistoryButton" layoutX="43.0" layoutY="166.0" onAction="#showBookingHistory" prefHeight="40.0" prefWidth="403.0" style="-fx-background-radius: 30; -fx-background-color: black;" text="View Booking History">
+            <font>
+               <Font name="Rockwell" size="14.0" />
+            </font>
+            <textFill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color red="0.9020833373069763" green="0.3472222089767456" blue="1.0" />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="0.9868420958518982" green="0.9868420958518982" blue="0.9868420958518982" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </LinearGradient>
+            </textFill>
+         </Button>
+           <Button fx:id="searchButton" layoutX="405.0" layoutY="98.0" onAction="#handleSearchVehicles" prefHeight="40.0" prefWidth="41.0" style="-fx-background-radius: 30; -fx-background-color: white;" text="🔍">
+            <textFill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color red="0.9020833373069763" green="0.3472222089767456" blue="1.0" />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="0.9868420958518982" green="0.9868420958518982" blue="0.9868420958518982" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </LinearGradient>
+            </textFill>
+            <font>
+               <Font name="Rockwell" size="14.0" />
+            </font>
+         </Button>
+           <TextField fx:id="searchField" layoutX="43.0" layoutY="98.0" prefHeight="40.0" prefWidth="350.0" promptText="Search vehicle by model or color" style="-fx-background-radius: 30; -fx-background-color: white;">
+            <font>
+               <Font name="Rockwell" size="14.0" />
+            </font>
+         </TextField>
+           <Button layoutX="43.0" layoutY="347.0" onAction="#handleReportSubmission" prefHeight="40.0" prefWidth="403.0" style="-fx-background-radius: 30; -fx-background-color: black;" text="Feedback">
+            <font>
+               <Font name="Rockwell" size="14.0" />
+            </font>
+            <textFill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color red="0.9020833373069763" green="0.3472222089767456" blue="1.0" />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="0.9868420958518982" green="0.9868420958518982" blue="0.9868420958518982" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </LinearGradient>
+            </textFill>
+         </Button>
+           <Button fx:id="logoutButton" layoutX="43.0" layoutY="449.0" onAction="#handleLogout" prefHeight="40.0" prefWidth="222.0" style="-fx-background-color: black; -fx-background-radius: 30;" text="🔓 Logout">
+            <textFill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color red="0.9020833373069763" green="0.3472222089767456" blue="1.0" />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="0.9868420958518982" green="0.9868420958518982" blue="0.9868420958518982" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </LinearGradient>
+            </textFill>
+            <font>
+               <Font name="Rockwell" size="14.0" />
+            </font>
+         </Button>
+           <Label layoutX="147.0" layoutY="38.0" prefHeight="27.0" prefWidth="296.0" text="Vehicle Rental Management">
+            <textFill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color red="0.9020833373069763" green="0.3472222089767456" blue="1.0" />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="0.9868420958518982" green="0.9868420958518982" blue="0.9868420958518982" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </LinearGradient>
+            </textFill>
+            <font>
+               <Font name="Rockwell" size="22.0" />
+            </font>
+         </Label>
+         <ImageView fitHeight="27.0" fitWidth="35.0" layoutX="231.0" layoutY="456.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@Images/logout.png" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="40.0" fitWidth="41.0" layoutX="338.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@Images/car.png" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="122.0" fitWidth="122.0" layoutX="358.0" layoutY="415.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@Images/car-rental.png" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="406.0" layoutY="173.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@Images/booking.png" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="406.0" layoutY="232.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@Images/analysis.png" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="406.0" layoutY="292.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@Images/return.png" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="406.0" layoutY="354.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@Images/feedback.png" />
+            </image>
+         </ImageView>
+      </children>
+   </AnchorPane>
+
+</VBox>

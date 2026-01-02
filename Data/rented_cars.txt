@@ -1,0 +1,3 @@
+Harresh,OPQ2345,Honda City,White,180.0
+Justin,ABC1234,Myvi,White,37.5
+Justin,JKL4321,Perodua Myvi,Silver,62.5

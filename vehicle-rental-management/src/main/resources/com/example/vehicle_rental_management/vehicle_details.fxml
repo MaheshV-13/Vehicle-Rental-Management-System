@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" spacing="20" xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vehicle_rental_management.controllers.VehicleDetailsController">
+   <AnchorPane prefHeight="554.0" prefWidth="603.0" style="-fx-background-color: #222121;">
+      <children>
+           <Button fx:id="backButton" layoutX="366.0" layoutY="16.0" onAction="#handleBack" prefHeight="42.0" prefWidth="223.0" style="-fx-background-radius: 30; -fx-background-color: black;" text="Back to DashBoard">
+            <textFill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color red="1.0" green="0.5" blue="0.9833333492279053" />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="1.0" green="1.0" blue="1.0" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </LinearGradient>
+            </textFill>
+            <font>
+               <Font name="Rockwell" size="14.0" />
+            </font>
+         </Button>
+   
+           <Button fx:id="bookNowButton" layoutX="126.0" layoutY="446.0" onAction="#handleBookNow" prefHeight="40.0" prefWidth="352.0" style="-fx-background-radius: 30; -fx-background-color: black;" text="Book Now">
+            <font>
+               <Font name="Rockwell" size="14.0" />
+            </font>
+            <textFill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color red="0.82164067029953" green="0.24916179478168488" blue="0.8736842274665833" />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="1.0" green="1.0" blue="1.0" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </LinearGradient>
+            </textFill>
+         </Button>
+           <Label fx:id="vehicleAvailabilityLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="197.0" layoutY="346.0" prefHeight="42.0" prefWidth="210.0">
+            <textFill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color red="1.0" green="0.5" blue="0.9833333492279053" />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="1.0" green="1.0" blue="1.0" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </LinearGradient>
+            </textFill>
+            <font>
+               <Font name="Rockwell" size="14.0" />
+            </font>
+         </Label>
+           <Label fx:id="vehiclePriceLabel" alignment="CENTER" layoutX="195.0" layoutY="286.0" prefHeight="42.0" prefWidth="210.0">
+            <textFill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color red="1.0" green="0.5" blue="0.9833333492279053" />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="1.0" green="1.0" blue="1.0" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </LinearGradient>
+            </textFill>
+            <font>
+               <Font name="Rockwell" size="14.0" />
+            </font>
+         </Label>
+           <Label fx:id="vehicleColorLabel" alignment="CENTER" layoutX="197.0" layoutY="221.0" prefHeight="42.0" prefWidth="210.0">
+            <textFill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color red="1.0" green="0.5" blue="0.9833333492279053" />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="1.0" green="1.0" blue="1.0" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </LinearGradient>
+            </textFill>
+            <font>
+               <Font size="14.0" />
+            </font>
+         </Label>
+           <Label fx:id="vehicleModelLabel" alignment="CENTER" layoutX="197.0" layoutY="159.0" prefHeight="42.0" prefWidth="210.0">
+            <textFill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color red="1.0" green="0.5" blue="0.9833333492279053" />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="1.0" green="1.0" blue="1.0" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </LinearGradient>
+            </textFill>
+            <font>
+               <Font name="Rockwell" size="14.0" />
+            </font>
+         </Label>
+           <Label fx:id="vehiclePlateLabel" alignment="CENTER" layoutX="197.0" layoutY="91.0" prefHeight="42.0" prefWidth="210.0">
+            <textFill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color red="1.0" green="0.5" blue="0.9833333492279053" />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="1.0" green="1.0" blue="1.0" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </LinearGradient>
+            </textFill>
+            <font>
+               <Font name="Rockwell" size="14.0" />
+            </font>
+         </Label>
+         <ImageView fitHeight="31.0" fitWidth="45.0" layoutX="546.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" style="-fx-rotate: 180;">
+            <image>
+               <Image url="@Images/right-arrow.png" />
+            </image>
+         </ImageView>
+           <Label layoutX="16.0" layoutY="24.0" text="Vehicle Rental Management">
+            <textFill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color red="1.0" green="0.5" blue="0.9833333492279053" />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="1.0" green="1.0" blue="1.0" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </LinearGradient>
+            </textFill>
+            <font>
+               <Font name="Rockwell" size="24.0" />
+            </font>
+         </Label>
+           <Label layoutX="121.0" layoutY="524.0" text="© 2025 Vehicle Rental Management. All rights reserved.">
+            <textFill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color red="1.0" green="0.5" blue="0.9833333492279053" />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="1.0" green="1.0" blue="1.0" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </LinearGradient>
+            </textFill>
+            <font>
+               <Font name="Rockwell" size="14.0" />
+            </font>
+         </Label>
+         <ImageView fitHeight="31.0" fitWidth="46.0" layoutX="432.0" layoutY="451.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@Images/booking.png" />
+            </image>
+         </ImageView>
+      </children>
+   </AnchorPane>
+
+</VBox>

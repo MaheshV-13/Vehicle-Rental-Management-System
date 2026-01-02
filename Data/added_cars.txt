@@ -1,0 +1,8 @@
+Bryan,MNO3445,Chevrolet Captiva,Blue,125,true
+Bryan,BKP8831,Toyota Camry,Silver,20,true
+justin,toyota,camry,white,1234,true
+justin,ABC1234,Myvi,White,30,true
+justin,Putrajaya,Toyota Avanza,Blue,90,true
+justin,PKN8097,Perodua Alza,Black,69,true
+Paul,MNH9087,Perodua Alza,Red,50,true
+Paul,MNH9086,Perodua Alza,Black,50,true

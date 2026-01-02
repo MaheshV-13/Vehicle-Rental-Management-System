@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="464.0" prefWidth="414.0" spacing="20" style="-fx-padding: 20; -fx-background-color: #222121; -fx-border-radius: 10;" xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vehicle_rental_management.controllers.PaymentController">
+   <AnchorPane prefHeight="463.0" prefWidth="428.0" style="-fx-background-color: #222121;">
+      <children>
+      
+          <!-- Payment Details Input -->
+          <TextField fx:id="paymentDetailsField" layoutX="29.0" layoutY="82.0" prefHeight="40.0" prefWidth="305.0" promptText="Enter Payment Details" style="-fx-background-radius: 30;">
+            <font>
+               <Font name="Rockwell" size="14.0" />
+            </font>
+         </TextField>
+           <Button layoutX="89.0" layoutY="322.0" onAction="#handleConfirmPayment" prefHeight="40.0" prefWidth="193.0" style="-fx-background-radius: 30; -fx-background-color: transparent;" text="Confirm Payment" underline="true">
+            <font>
+               <Font name="Rockwell" size="14.0" />
+            </font>
+            <textFill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color red="0.9770833253860474" green="0.5416666865348816" blue="1.0" />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="0.9342105388641357" green="0.9342105388641357" blue="0.9342105388641357" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </LinearGradient>
+            </textFill>
+         </Button>
+           <Button layoutX="150.0" layoutY="376.0" onAction="#handleCancelPayment" style="-fx-background-radius: 30; -fx-background-color: transparent;" text="Cancel">
+            <font>
+               <Font name="Rockwell" size="14.0" />
+            </font>
+            <textFill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color red="0.9770833253860474" green="0.5416666865348816" blue="1.0" />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="0.9342105388641357" green="0.9342105388641357" blue="0.9342105388641357" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </LinearGradient>
+            </textFill>
+         </Button>
+      
+          <!-- Total Amount -->
+          <Label fx:id="totalAmountLabel" layoutX="126.0" layoutY="264.0" text="Total: RM0.00">
+            <font>
+               <Font name="Rockwell" size="18.0" />
+            </font>
+            <textFill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color red="0.9770833253860474" green="0.5416666865348816" blue="1.0" />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="0.9342105388641357" green="0.9342105388641357" blue="0.9342105388641357" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </LinearGradient>
+            </textFill>
+         </Label>
+      
+          <!-- Title -->
+          <Label fx:id="paymentLabel" layoutX="38.0" layoutY="10.0" text="Confirm Payment">
+            <font>
+               <Font name="Rockwell" size="36.0" />
+            </font>
+            <textFill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color red="0.9770833253860474" green="0.5416666865348816" blue="1.0" />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="0.9342105388641357" green="0.9342105388641357" blue="0.9342105388641357" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </LinearGradient>
+            </textFill>
+         </Label>
+           <ChoiceBox fx:id="paymentMethodChoiceBox" layoutX="33.0" layoutY="192.0" prefHeight="40.0" prefWidth="305.0" style="-fx-background-radius: 30; -fx-background-color: white;">
+               <items>
+                   <FXCollections fx:factory="observableArrayList">
+                       <String fx:value="Touch 'n Go eWallet" />
+                       <String fx:value="DuitNow" />
+                       <String fx:value="Credit/Debit Card" />
+                       <String fx:value="Online Banking" />
+                   </FXCollections>
+               </items>
+           </ChoiceBox>
+           <Label layoutX="33.0" layoutY="155.0" text="Payment Method:">
+            <textFill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color red="0.9770833253860474" green="0.5416666865348816" blue="1.0" />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="0.9342105388641357" green="0.9342105388641357" blue="0.9342105388641357" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </LinearGradient>
+            </textFill>
+            <font>
+               <Font name="Rockwell" size="18.0" />
+            </font>
+         </Label>
+         <ImageView fitHeight="29.0" fitWidth="49.0" layoutX="293.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@Images/billing_2643269.png" />
+            </image>
+         </ImageView>
+      </children>
+   </AnchorPane>
+</VBox>
