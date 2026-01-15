@@ -9,7 +9,7 @@ A software application designed to automate and streamline the vehicle rental pr
 
 ## ✨ Features
 Here's what you can do with Vehicle Rental Management System:
-* Three user roles — Admin, Customer, and Vehicle Owner.
+* 3 user roles — Admin, Customer, and Vehicle Owner.
 * Admins manage users, handle reports and feedback, and oversee the system.
 * Customers can rent vehicles and track their rental history.
 * Vehicle owners can rent cars and list their own vehicles for rental.
